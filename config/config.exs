@@ -1,6 +1,6 @@
 import Config
 
-config :ash_2385, ecto_repos: [Ash2385.Repo]
+config :ash_2385, ecto_repos: [Ash2385.Repo], ash_domains: [Ash2385.MyDomain]
 
 config :ash,
   allow_forbidden_field_for_relationships_by_default?: true,
