@@ -54,8 +54,10 @@ Ash.Changeset.for_update(my_resource, :update_balance, %{amount: Decimal.new("-1
     }
   ],
   data: %Ash2385.MyDomain.MyResource{
-    id: "0199e706-bd54-7e0a-8468-11259b32a0d8",
-    balance: Decimal.new("0"),
+    id: "0199f27e-3bf9-73f9-9f71-9a2327647ac6",
+    balance: Decimal.new("0.00000"),
+    inserted_at: ~U[2025-10-17 14:06:23.227608Z],
+    updated_at: ~U[2025-10-17 14:06:23.227608Z],
     __meta__: #Ecto.Schema.Metadata<:loaded, "my_resources">
   },
   valid?: false
@@ -68,13 +70,13 @@ my_resource |> Map.put(:balance, Decimal.new(1)) |> Ash.Changeset.for_update(:up
    changeset: "#Changeset<>",
    errors: [
      %Ash.Error.Changes.InvalidChanges{
-       fields: [:balance],
-       message: "insufficient_balance",
+       fields: nil,
+       message: "must be greater than or equal to %{min}",
        validation: nil,
        value: nil,
        splode: Ash.Error,
        bread_crumbs: ["Returned from bulk query update: Ash2385.MyDomain.MyResource.update_balance"],
-       vars: [],
+       vars: [{"min", "0"}],
        path: [],
        stacktrace: #Splode.Stacktrace<>,
        class: :invalid
@@ -112,8 +114,10 @@ Ash.Changeset.for_update(my_resource, :update_balance, %{amount: Decimal.new("-1
     }
   ],
   data: %Ash2385.MyDomain.MyResource{
-    id: "0199e705-4d02-7ab7-8015-b9ed0a22b18a",
-    balance: Decimal.new("0"),
+    id: "0199f280-9535-7f54-a170-824d94ff8976",
+    balance: Decimal.new("0.00000"),
+    inserted_at: ~U[2025-10-17 14:08:57.141984Z],
+    updated_at: ~U[2025-10-17 14:08:57.141984Z],
     __meta__: #Ecto.Schema.Metadata<:loaded, "my_resources">
   },
   valid?: false
@@ -138,5 +142,5 @@ my_resource |> Map.put(:balance, Decimal.new(1)) |> Ash.Changeset.for_update(:up
        class: :invalid
      }
    ]
- }}
+ }
 ```

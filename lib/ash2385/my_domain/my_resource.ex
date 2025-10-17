@@ -37,5 +37,7 @@ defmodule Ash2385.MyDomain.MyResource do
       allow_nil? false
       public? true
     end
+
+    timestamps(type: AshPostgres.TimestamptzUsec)
   end
 end
